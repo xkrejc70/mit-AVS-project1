@@ -1,0 +1,3 @@
+C:/Users/jankr/Downloads/avs-proj01/out/build/x64-Debug/CMakeFiles/mandelbrot.dir
+C:/Users/jankr/Downloads/avs-proj01/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/jankr/Downloads/avs-proj01/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

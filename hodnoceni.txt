@@ -1,0 +1,68 @@
+Hodnoceni prvniho projektu AVS: xkrejc70 
+================================================================================
+## Vektorizace po radcich
++1.00 b: spravnost vystupu: (error = 0.013%)  (max 1 b)
++1.00 b: cas 414 ms do limitu 1500 ms (a spravny vystup)  (max 1 b)
+Reseni se umistilo mezi 13.86% nejrychlejsimi resenimi
+
+
+## Vektorizace po blocich
++1.00 b: spravnost vystupu: (error = 0.013%)  (max 1 b)
++1.00 b: cas 167 ms do limitu 500 ms (a spravny vystup)  (max 1 b)
++1.00 b: cas 167 ms do limitu 750 ms (a spravny vystup)  (max 1 b)
++1.00 b: cas 167 ms do limitu 1000 ms (a spravny vystup)  (max 1 b)
+Reseni se umistilo mezi 16.13% nejrychlejsimi resenimi
+
+## Odpovedi, implementace a grafy
++1.00 b: Ukoncovaci smycka (Q1) (max 1 b)
++1.00 b: Neefektivita line (Q2) (max 1 b)
++1.00 b: Analyza v Intel Tools (Q3,Q4,Q5) (max 1 b)
++1.00 b: Graf evaluace (max 1 b)
+Celkem ziskano: 10.0 bodu
+
+Komentar
+================================================================================
+v poradku
+
+
+Log kompilace (stdout)
+================================================================================
+-- The C compiler identification is Intel 2021.1.0.20201208
+-- The CXX compiler identification is Intel 2021.1.0.20201208
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ZLIB: /apps/all/zlib/1.2.11-GCCcore-10.3.0/lib/libz.so (found version "1.2.11") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70
+/apps/all/CMake/3.21.2-GCCcore-9.3.0/bin/cmake -S/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 -B/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 --check-build-system CMakeFiles/Makefile.cmake 0
+/apps/all/CMake/3.21.2-GCCcore-9.3.0/bin/cmake -E cmake_progress_start /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/CMakeFiles /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70//CMakeFiles/progress.marks
+make  -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/scratch/project/dd-21-22/eval_avs01/xkrejc70'
+make  -f CMakeFiles/mandelbrot.dir/build.make CMakeFiles/mandelbrot.dir/depend
+make[2]: Entering directory `/scratch/project/dd-21-22/eval_avs01/xkrejc70'
+cd /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 && /apps/all/CMake/3.21.2-GCCcore-9.3.0/bin/cmake -E cmake_depends "Unix Makefiles" /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70 /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/CMakeFiles/mandelbrot.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/scratch/project/dd-21-22/eval_avs01/xkrejc70'
+make  -f CMakeFiles/mandelbrot.dir/build.make CMakeFiles/mandelbrot.dir/build
+make[2]: Entering directory `/scratch/project/dd-21-22/eval_avs01/xkrejc70'
+[ 14%] Building CXX object CMakeFiles/mandelbrot.dir/calculators/BaseMandelCalculator.cc.o
+/apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc  -I/apps/all/zlib/1.2.11-GCCcore-10.3.0/include -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators -O3 -mavx2 -xHost -qopt-zmm-usage=high -g -qopenmp-simd -qopt-report=1 -qopt-report-phase=vec -std=gnu++11 -MD -MT CMakeFiles/mandelbrot.dir/calculators/BaseMandelCalculator.cc.o -MF CMakeFiles/mandelbrot.dir/calculators/BaseMandelCalculator.cc.o.d -o CMakeFiles/mandelbrot.dir/calculators/BaseMandelCalculator.cc.o -c /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators/BaseMandelCalculator.cc
+[ 28%] Building CXX object CMakeFiles/mandelbrot.dir/calculators/BatchMandelCalculator.cc.o
+/apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc  -I/apps/all/zlib/1.2.11-GCCcore-10.3.0/include -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators -O3 -mavx2 -xHost -qopt-zmm-usage=high -g -qopenmp-simd -qopt-report=1 -qopt-report-phase=vec -std=gnu++11 -MD -MT CMakeFiles/mandelbrot.dir/calculators/BatchMandelCalculator.cc.o -MF CMakeFiles/mandelbrot.dir/calculators/BatchMandelCalculator.cc.o.d -o CMakeFiles/mandelbrot.dir/calculators/BatchMandelCalculator.cc.o -c /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators/BatchMandelCalculator.cc
+[ 42%] Building CXX object CMakeFiles/mandelbrot.dir/calculators/LineMandelCalculator.cc.o
+/apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc  -I/apps/all/zlib/1.2.11-GCCcore-10.3.0/include -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators -O3 -mavx2 -xHost -qopt-zmm-usage=high -g -qopenmp-simd -qopt-report=1 -qopt-report-phase=vec -std=gnu++11 -MD -MT CMakeFiles/mandelbrot.dir/calculators/LineMandelCalculator.cc.o -MF CMakeFiles/mandelbrot.dir/calculators/LineMandelCalculator.cc.o.d -o CMakeFiles/mandelbrot.dir/calculators/LineMandelCalculator.cc.o -c /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators/LineMandelCalculator.cc
+[ 57%] Building CXX object CMakeFiles/mandelbrot.dir/calculators/RefMandelCalculator.cc.o
+/apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc  -I/apps/all/zlib/1.2.11-GCCcore-10.3.0/include -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators -O3 -mavx2 -xHost -qopt-zmm-usage=high -g -qopenmp-simd -qopt-report=1 -qopt-report-phase=vec -std=gnu++11 -MD -MT CMakeFiles/mandelbrot.dir/calculators/RefMandelCalculator.cc.o -MF CMakeFiles/mandelbrot.dir/calculators/RefMandelCalculator.cc.o.d -o CMakeFiles/mandelbrot.dir/calculators/RefMandelCalculator.cc.o -c /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators/RefMandelCalculator.cc
+[ 71%] Building CXX object CMakeFiles/mandelbrot.dir/common/cnpy.cc.o
+/apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc  -I/apps/all/zlib/1.2.11-GCCcore-10.3.0/include -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators -O3 -mavx2 -xHost -qopt-zmm-usage=high -g -qopenmp-simd -qopt-report=1 -qopt-report-phase=vec -std=gnu++11 -MD -MT CMakeFiles/mandelbrot.dir/common/cnpy.cc.o -MF CMakeFiles/mandelbrot.dir/common/cnpy.cc.o.d -o CMakeFiles/mandelbrot.dir/common/cnpy.cc.o -c /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common/cnpy.cc
+[ 85%] Building CXX object CMakeFiles/mandelbrot.dir/main.cc.o
+/apps/all/intel-compilers/2021.1.2/compiler/2021.1.2/linux/bin/intel64/icpc  -I/apps/all/zlib/1.2.11-GCCcore-10.3.0/include -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/common -I/home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/calculators -O3 -mavx2 -xHost -qopt-zmm-usage=high -g -qopenmp-simd -qopt-report=1 -qopt-report-phase=vec -std=gnu++11 -MD -MT CMakeFiles/mandelbrot.dir/main.cc.o -MF CMakeFiles/mandelbrot.dir/main.cc.o.d -o CMakeFiles/mandelbrot.dir/main.cc.o -c /home/training/dd-21-22-255/AVS/Assignments/01/Evaluation/eval/xkrejc70/main.cc
+[100%] Linking 

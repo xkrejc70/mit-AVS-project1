@@ -1,0 +1,34 @@
+#### Stručně odpovězte na následující otázky: ######
+
+1. Proč je nutné určovat, zda má výpočet pokračovat?
+==============================================================================
+Po překročení prahové hodnoty míří posloupnost k nekonečnu, nemá tak žádný
+význam počítat další její hodnoty.
+
+2. Byla "Line" vektorizace efektivní? Proč?
+==============================================================================
+Line verze je efektivnější než referenční, protože při zpracování po řádcích
+se využijí i zbylá data v načtené cache line a nedochází tak k neustálému
+přepisování (výpadkům). Stále zde ale probíhají zbytečné itarace celého řádku,
+a to až do nalezení prahové hodnoty každého prvku daného řádku. Tento problém
+je vyřešen v batch verzi, kde je řádek rozdělen na menší části.
+
+3. Jaká byla dosažena výkonnost v Intel Advisoru pro jednotlivé implementace 
+(v GFLOPS)?
+==============================================================================
+Line:	20.89 GFLOPS
+Batch:	25.04 GFLOPS
+
+4. Jaká část kódu byla paralizována v "Line" implementaci? Vyčteme tuto 
+informaci i u batch kalkulátoru?
+==============================================================================
+Advisor potvrdil, že nejvnitřejší smyčku (procházení reálných hodnot po řádku),
+ve které probíhá hlavní výpočet, se podařilo vektorizovat u obou verzí.
+
+5. Co vyčteme z Roofline modelu pro obě vektorizované implementace?
+==============================================================================
+U referenční verze byla aritmetická intenzita na hodnotě 0.16 FLOP/Byte, také
+výpočet byl bržděn pamětí (v grafu až pod úrovní DRAM). Po přehození smyček
+již nedochází k tolika výpadkům, což dokazuje i zvýšená aritmetická intenzita:
+0.34 (Line) a 0.39 (Batch). Propustnost paměti se také zvýšila (v grafu těsně
+pod L2C).
